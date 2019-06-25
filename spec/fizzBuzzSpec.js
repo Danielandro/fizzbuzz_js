@@ -35,22 +35,46 @@ describe('Javabuzz', function () {
   });
 
   describe('when playing, says', function () {
-    it('"Java" when number is divisble by 3', function () {
-      expect(javabuzz.says(3)).toEqual("Java");
+    
+    describe('"Java" when number is divisble by 3', function () {
+      it('number is 3', function () {
+        expect(javabuzz.says(3)).toEqual("Java");
+      });
+
+      it('number is 12', function () {
+        expect(javabuzz.says(12)).toEqual("Java");
+      });
     });
 
-    it('"Buzz" when number divisble by 5', function() {
-      expect(javabuzz.says(5)).toEqual("Buzz");
+    describe('"Buzz" when number divisble by 5', function() {
+      it('number is 5', function() {
+        expect(javabuzz.says(5)).toEqual("Buzz");
+      });
+      
+      it('number is 10', function () {
+        expect(javabuzz.says(10)).toEqual("Buzz");
+      }); 
     });
 
-    it('"Javabuzz" when number divisible by 15', function() {
-      expect(javabuzz.says(15)).toEqual("Javabuzz");
-    }); 
+    describe('"Javabuzz" when number divisible by 15', function() {
+      it('number is 15', function () {
+        expect(javabuzz.says(15)).toEqual("Javabuzz");
+      }); 
 
-    it('The number when not divisible by 3, 5 or 15', function() {
-      expect(javabuzz.says(11)).toEqual(11);
+      it('number is 30', function () {
+        expect(javabuzz.says(30)).toEqual("Javabuzz");
+      }); 
+    });    
+
+    describe('The number when not divisible by 3, 5 or 15', function() {
+      it('number is 11', function () {
+        expect(javabuzz.says(11)).toEqual(11);
+      });
+
+      it('number is 19', function () {
+        expect(javabuzz.says(19)).toEqual(19);
+      });
     });
+    
   });
-
 });
-
