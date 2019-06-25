@@ -19,7 +19,7 @@ Open the `SpecRunner.html` file in your browser
 
 Launch the console: `Command+Option+J` (Mac), `Control+Shift+J` (Windows/Linux)
 
-E.G.
+**Example**
 
 ```javascript
 
